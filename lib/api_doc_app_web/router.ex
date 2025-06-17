@@ -20,6 +20,12 @@ defmodule ApiDocAppWeb.Router do
     get "/", PageController, :home
   end
 
+  scope "/api", ApiDocAppWeb do
+    pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", ApiDocAppWeb do
   #   pipe_through :api
