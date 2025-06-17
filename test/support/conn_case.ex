@@ -28,6 +28,7 @@ defmodule ApiDocAppWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import ApiDocAppWeb.ConnCase
+      import Bureaucrat.Helpers
     end
   end
 
